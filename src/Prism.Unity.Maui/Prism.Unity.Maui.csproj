@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prism.Maui\Prism.Maui.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Lifetimes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lifetimes\" />
+  </ItemGroup>
+  <Import Project="..\Prism.Unity.Shared\Prism.Unity.Shared.projitems" Label="Shared" Condition="Exists('..\Prism.Unity.Shared\Prism.Unity.Shared.projitems')" />
+</Project>
